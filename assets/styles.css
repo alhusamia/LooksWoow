@@ -1,0 +1,394 @@
+@font-face {
+  font-family: OpenSansRegular;
+  font-display: swap;
+  src: url("./Fonts/OpenSans-Regular.ttf");
+}
+@font-face {
+  font-family: OpenSansBold;
+  font-display: swap;
+  src: url("./Fonts/OpenSans-Bold.ttf");
+}
+@font-face {
+  font-family: OpenSansBoldSemibold;
+  font-display: swap;
+  src: url("./Fonts/OpenSans-SemiBold.ttf");
+}
+
+.App {
+  display: grid;
+  grid-template-columns: 1fr 20fr 1fr;
+}
+.Row1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.Row2 {
+  margin-left: 50px;
+}
+.Left {
+  display: grid;
+  grid-template-rows: 0.45fr 0.5fr 0.25fr 0.35fr;
+  margin-left: 50px;
+}
+.Lrow1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 40px;
+}
+.Lrow2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.Lrow3 {
+  justify-content: space-between;
+}
+.T1 {
+  font-size: 32px;
+  color: #3f96ad;
+  text-align: right;
+  font-family: OpenSansRegular;
+}
+.T2 {
+  color: #ffffff;
+  font-size: 31px;
+  text-align: center;
+  font-family: OpenSansBold;
+}
+.CT2 {
+  width: 228px;
+  height: 48px;
+  background-color: #d80e83;
+  margin-left: 53px;
+}
+.T3 {
+  color: #3f96ad;
+  font-size: 30px;
+  text-align: center;
+  font-family: OpenSansRegular;
+}
+.T4 {
+  color: #d70d7e;
+  font-size: 68px;
+  font-family: OpenSansBold;
+}
+span {
+  font-size: 41px;
+  font-family: OpenSansBold;
+}
+.T5 {
+  color: #d70d7e;
+  font-size: 16px;
+  text-align: center;
+  font-family: OpenSansRegular;
+}
+.T6 {
+  color: #878a8c;
+  font-size: 22px;
+  text-align: left;
+  font-family: OpenSansRegular;
+}
+.T7 {
+  color: #d80e83;
+  font-size: 22px;
+  text-align: left;
+  text-decoration: underline;
+  font-family: OpenSansBold;
+}
+.T8 {
+  color: #878a8c;
+  text-align: left;
+  font-size: 16px;
+  font-family: OpenSansBoldSemibold;
+}
+.T9 {
+  color: #878a8c;
+  text-align: left;
+  font-size: 16px;
+  font-family: OpenSansRegular;
+}
+.T10 {
+  color: #878a8c;
+  text-align: left;
+  font-size: 16px;
+  margin-top: 7px;
+  padding-bottom: 12px;
+  font-family: OpenSansRegular;
+}
+.Button1 {
+  border: none;
+  color: #ffffff;
+  font-size: 25px;
+  padding: 5px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  background-color: #3a93ab;
+  outline: none;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 16px;
+  font-family: OpenSansRegular;
+}
+.Button1:focus {
+  outline: none;
+}
+
+.Button2 {
+  border: none;
+  color: white;
+  font-size: 25px;
+  padding: 5px 42px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 0px 4px 15px;
+  cursor: pointer;
+  background-color: #d80e83;
+  outline: none;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 16px;
+  font-family: OpenSansRegular;
+}
+.Button2:focus {
+  outline: none;
+}
+.B4 {
+  border: none;
+  color: white;
+  padding: 10px 53px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: #d80e83;
+  outline: none;
+  margin-top: 10px;
+  font-family: SorceSnaceBold;
+}
+.B4:disabled {
+  background-color: #888;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 40%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+.close {
+  color: black;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 20px 16px;
+  background-color: white;
+}
+
+.modal-body {
+  padding: 2px 16px;
+  display: block;
+}
+
+.greeting {
+  display: none;
+  text-align: center;
+  font-size: 40px;
+  font-family: OpenSansRegular;
+}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: white;
+  color: white;
+}
+input[type="text"] {
+  width: 100%;
+  padding: 13px;
+  box-sizing: border-box;
+  font-size: 16px;
+  margin: 10px 0;
+  background-color: #dddedf;
+  border: none;
+  border-radius: 5px;
+  font-family: OpenSansRegular;
+}
+#label1 {
+  display: block;
+  font-family: OpenSansBold;
+}
+#label2 {
+  display: block;
+  font-family: OpenSansRegular;
+}
+select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: #dddedf;
+  font-weight: bold;
+  color: grey;
+  border: none;
+}
+option {
+  background-color: #fefefe;
+  color: #000;
+  border: none;
+  font-family: OpenSansRegular;
+}
+.container {
+  position: relative;
+}
+.loader {
+  display: none;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 10px solid black;
+  border-bottom: 10px solid black;
+  border-left: 10px solid white;
+  border-right: 10px solid white;
+  width: 20px;
+  height: 20px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 839px) {
+  .Row1 {
+    grid-template-columns: 1fr;
+    columns: 1;
+  }
+  .Row2 {
+    margin: 0;
+  }
+  .Left {
+    margin: 0 14px;
+  }
+  .Image {
+    height: 404px;
+    margin: 20px 0;
+  }
+  .T3 {
+    font-size: 25px;
+  }
+  .T4 {
+    font-size: 50px;
+  }
+  span {
+    font-size: 28px;
+  }
+  .Lrow2 {
+    margin-top: 25px;
+  }
+  .Lrow3 {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 25px;
+  }
+  .Lrow4 {
+    margin-top: 25px;
+  }
+  .Button1 {
+    width: 95%;
+  }
+  .Button2 {
+    margin-left: 0px;
+    width: 95%;
+  }
+  .CT2 {
+    margin-left: 0;
+    width: 167px;
+  }
+  .T1 {
+    font-size: 22px;
+    text-align: center;
+  }
+  .T2 {
+    font-size: 21px;
+  }
+  .Logo {
+    width: 225px;
+  }
+  .modal-content {
+    width: 90%;
+  }
+}

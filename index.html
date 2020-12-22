@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/styles.css" />
+  </head>
+  <body>
+    <div class="App">
+      <div></div>
+      <div>
+        <div class="Row1">
+          <div class="Left">
+            <div class="Lrow1">
+              <div>
+                <img src="./assets/image/logo.png" alt="" class="Logo" />
+              </div>
+              <div>
+                <div class="T1">Invisible Braces</div>
+                <div class="CT2"><div class="T2">In Dubai Mall</div></div>
+              </div>
+            </div>
+            <div class="Lrow2">
+              <div class="L">
+                <div class="T3">Simple Cases</div>
+                <div class="T4">7,999<span>AED</span></div>
+                <div class="T5">Installments available</div>
+              </div>
+              <div class="R">
+                <div class="T3">Advanced Cases</div>
+                <div class="T4">11,999<span>AED</span></div>
+                <div class="T5">Installments available</div>
+              </div>
+            </div>
+            <div class="Lrow3">
+              <button class="Button1">Learn more</button>
+              <button class="Button2" onclick="Book()">
+                Book your consultation
+              </button>
+            </div>
+            <div class="Lrow4">
+              <div class="T6">Offer is valid for consultations booked</div>
+              <div class="T6">Dec 23rd and Jan 20th</div>
+              <div class="T7">Don’t miss it and book now!</div>
+            </div>
+          </div>
+          <div class="Right">
+            <img src="./assets/image/Image.png" alt="" class="Image" />
+          </div>
+        </div>
+        <div class="Row2">
+          <div class="T8">Consultation includes:</div>
+          <div class="T9">1. Professional teeth cleaning & scaling.</div>
+          <div class="T9">2. 3D teeth scan.</div>
+          <div class="T9">
+            3. Treatment plan 3D video showing how your teeth will move and the
+            final result of your treatment.
+          </div>
+          <div class="T10">
+            Consultation cost is 200 AED (Will be deducted from the total
+            treatment cost)
+          </div>
+        </div>
+      </div>
+      <div></div>
+    </div>
+    <div id="Modal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <div id="label1">Submit your information</div>
+          <span class="close">&times;</span>
+          <div id="label2">And we will contact you shortly</div>
+        </div>
+        <div class="modal-body" id="body">
+          <form id="myForm">
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value=""
+              placeholder="Name"
+              required
+            /><br />
+            <select name="contact" id="contact" required>
+              <option hidden>Contact Method</option>
+              <option value="phone">Phone</option>
+              <option value="WhatsApp">WhatsApp</option>
+              <option value="Email">Email</option>
+            </select>
+            <br />
+            <input
+              type="text"
+              id="contact_select"
+              name="contact input"
+              placeholder="Contact input"
+              value=""
+              required
+            />
+            <div class="center">
+              <button type="submit" id="submit" class="B4">Submit</button>
+              <div class="loader" id="loader"></div>
+            </div>
+          </form>
+        </div>
+        <div class="greeting" id="greet">Thank You</div>
+        <div class="modal-footer"></div>
+      </div>
+    </div>
+    <script src="assets/Main.js"></script>
+  </body>
+</html>
