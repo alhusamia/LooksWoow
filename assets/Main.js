@@ -1,23 +1,20 @@
 var modal = document.getElementById("Modal");
 const body = document.getElementById("body");
 const greet = document.getElementById("greet");
-const label1 = document.getElementById("label1");
-const label2 = document.getElementById("label2");
+
+var phone = document.getElementById("phone");
+var WhatsApp = document.getElementById("WhatsApp");
+var Email = document.getElementById("Email");
+var btn = document.getElementById("CheckIn");
 var span = document.getElementsByClassName("close")[0];
-var contact = document.getElementById("contact");
-var cont_select = document.getElementById("contact_select");
+var cont = document.getElementById("contact");
 var submit = document.getElementById("submit");
 const name = document.getElementById("name");
 var formel = document.getElementById("myForm");
-var loader = document.getElementById("loader");
 var method = "";
 
 function Book() {
-  modal.style.display = "block";  
-  greet.style.display = "none";
-  body.style.display = "block";
-  label1.style.display = "block";
-  label2.style.display = "block";
+  modal.style.display = "block";
 }
 
 span.onclick = function () {
@@ -25,35 +22,34 @@ span.onclick = function () {
 };
 
 window.onclick = function (event) {
-  if (event.target == modal && loader.style.display === "none") {
+  if (event.target == modal) {
     modal.style.display = "none";
   }
 };
 
-contact.onchange = function () {
-  const placeholder = () => {
-    if (contact.value == "phone") {
-      cont_select.value = "";
-      return "+962 *** *** ***";
-    } else if (`${contact.value}` === "WhatsApp") {
-      cont_select.value = "";
-      return "+962 *** *** ***";
-    } else if (`${contact.value}` === "Email") {
-      cont_select.value = "";
-      return "****@gmail.com";
-    }
-  };
-  cont_select.placeholder = placeholder();
-  value = `${contact.value}`;
+phone.onclick = function () {
+  cont.style.display = "block";
+  cont.placeholder = "00962-xxx-xxx-xxx";
+  value = "phone";
+};
+
+WhatsApp.onclick = function () {
+  cont.style.display = "block";
+  cont.placeholder = "00962-xxx-xxx-xxx";
+  value = "whatsapp";
+};
+
+Email.onclick = function () {
+  cont.style.display = "block";
+  cont.placeholder = "****@gmail.com";
+  value = "email";
 };
 
 formel.onsubmit = async (e) => {
   e.preventDefault();
-  loader.style.display = "block";
-  submit.disabled = true;
   let obj = {
     name: name.value,
-    contactMethod: `${method} ${cont_select.value} -Clinic : Mohammad Orthodontic  Center`,
+    contactMethod: `${method} ${cont.value} -Clinic : Al-Qimmah Clinic`,
   };
 
   let response = await fetch(
@@ -66,11 +62,6 @@ formel.onsubmit = async (e) => {
 
   if (response.status == 200) {
     body.style.display = "none";
-    label1.style.display = "none";
-    label2.style.display = "none";
-    formel.reset();
     greet.style.display = "block";
-    loader.style.display = "none";
-    submit.disabled = false;
   }
 };

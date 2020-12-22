@@ -300,6 +300,9 @@ option {
 .container {
   position: relative;
 }
+#contact {
+  display: none;
+}
 .loader {
   display: none;
   border: 16px solid #f3f3f3;
@@ -344,14 +347,15 @@ option {
     margin: 0 14px;
   }
   .Image {
-    height: 404px;
+    /* height: 404px; */
+    height: 55%;
     margin: 20px 0;
   }
   .T3 {
-    font-size: 25px;
+    font-size: 19px;
   }
   .T4 {
-    font-size: 50px;
+    font-size: 31px;
   }
   span {
     font-size: 28px;
@@ -386,7 +390,8 @@ option {
     font-size: 21px;
   }
   .Logo {
-    width: 225px;
+    /* width: 225px; */
+    width: 90%;
   }
   .modal-content {
     width: 90%;

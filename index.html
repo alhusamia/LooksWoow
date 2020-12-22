@@ -41,7 +41,7 @@
             <div class="Lrow4">
               <div class="T6">Offer is valid for consultations booked</div>
               <div class="T6">Dec 23rd and Jan 20th</div>
-              <div class="T7">Don’t miss it and book now!</div>
+              <div class="T7" onclick="Book()">Don’t miss it and book now!</div>
             </div>
           </div>
           <div class="Right">
@@ -64,8 +64,7 @@
       </div>
       <div></div>
     </div>
-    <div id="Modal" class="modal">
-      <!-- Modal content -->
+    <!-- <div id="Modal" class="modal">     
       <div class="modal-content">
         <div class="modal-header">
           <div id="label1">Submit your information</div>
@@ -104,6 +103,50 @@
           </form>
         </div>
         <div class="greeting" id="greet">Thank You</div>
+        <div class="modal-footer"></div>
+      </div>
+    </div> -->
+    <div id="Modal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="close">&times;</div>
+        </div>
+        <div class="modal-body" id="body">
+          <form id="myForm">
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value=""
+              placeholder="Name"
+              required
+            /><br />
+
+            <div style="display: flex; margin: 10px 0">
+              <input type="radio" id="phone" name="contact" value="phone" />
+              <label>Phone</label><br />
+              <input
+                type="radio"
+                id="WhatsApp"
+                name="contact"
+                value="WhatsApp"
+              />
+              <label>WhatsApp</label><br />
+              <input type="radio" id="Email" name="contact" value="Email" />
+              <label>Email</label><br />
+            </div>
+            <br />
+            <input
+              type="text"
+              id="contact"
+              name="contact input"
+              placeholder=""
+              value=""
+            />
+            <button type="submit" id="submit" class="B4">Submit</button>
+          </form>
+        </div>
+        <div class="greeting" id="greet">Thanks for your time</div>
         <div class="modal-footer"></div>
       </div>
     </div>
