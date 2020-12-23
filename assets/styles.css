@@ -22,6 +22,9 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+.Right {
+  display: grid;
+}
 .Row2 {
   margin-left: 50px;
 }
@@ -270,13 +273,9 @@ input[type="text"] {
   border-radius: 5px;
   font-family: OpenSansRegular;
 }
-#label1 {
+label {
   display: block;
   font-family: OpenSansBold;
-}
-#label2 {
-  display: block;
-  font-family: OpenSansRegular;
 }
 select {
   width: 100%;
@@ -338,7 +337,6 @@ option {
 @media (max-width: 839px) {
   .Row1 {
     grid-template-columns: 1fr;
-    columns: 1;
   }
   .Row2 {
     margin: 0;
@@ -347,18 +345,26 @@ option {
     margin: 0 14px;
   }
   .Image {
-    /* height: 404px; */
-    height: 55%;
+    width: 100%;
     margin: 20px 0;
   }
   .T3 {
-    font-size: 19px;
+    font-size: 17px;
   }
   .T4 {
-    font-size: 31px;
+    font-size: 35px;
+  }
+  .T5 {
+    font-size: 12px;
+  }
+  .T6 {
+    font-size: 20px;
+  }
+  .T7 {
+    font-size: 20px;
   }
   span {
-    font-size: 28px;
+    font-size: 21px;
   }
   .Lrow2 {
     margin-top: 25px;
@@ -373,25 +379,26 @@ option {
   }
   .Button1 {
     width: 95%;
+    font-size: 25px;
   }
   .Button2 {
+    font-size: 25px;
     margin-left: 0px;
     width: 95%;
   }
   .CT2 {
-    margin-left: 0;
-    width: 167px;
+    margin-left: 21px;
+    width: 90%;
   }
   .T1 {
-    font-size: 22px;
-    text-align: center;
+    font-size: 17px;
   }
   .T2 {
-    font-size: 21px;
+    font-size: 16px;
+    padding: 10px;
   }
-  .Logo {
-    /* width: 225px; */
-    width: 90%;
+  .Logo {   
+    width: 100%;
   }
   .modal-content {
     width: 90%;
